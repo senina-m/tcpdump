@@ -1,0 +1,19 @@
+diff --git a/configure b/configure
+index 1356816c..93e13a16 100755
+--- a/configure
++++ b/configure
+@@ -7154,10 +7154,12 @@ else
+ #	    endif
+ 	    #include <stdio.h>
+ 	    #include <sys/types.h>
+-
++            #include <stdlib.h>
++            #include <string.h>
++            int
+ 	    main()
+ 	    {
+-	      u_int64_t t = 1;
++	      u_int64_t t = 1UL;
+ 	      char strbuf[16+1];
+ 	      sprintf(strbuf, "%016llx", t << 32);
+ 	      if (strcmp(strbuf, "0000000100000000") == 0)
