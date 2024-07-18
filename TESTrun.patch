@@ -1,0 +1,13 @@
+diff --git a/tests/TESTrun.sh b/tests/TESTrun.sh
+index d1baaa7b..f4104887 100755
+--- a/tests/TESTrun.sh
++++ b/tests/TESTrun.sh
+@@ -48,6 +48,8 @@ do
+       cat DIFF/$output.diff >> failure-outputs.txt
+       echo >> failure-outputs.txt
+   fi
++  i=`expr $passed + $failed`
++  mv default.profraw $i.profraw
+ done 
+ 
+ # I hate shells with their stupid, useless subshells.
